@@ -5,6 +5,8 @@ import NavbarComponent from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Signin from "./components/Auth/Signin";
 import Signup from "./components/Auth/Signup";
+import NotFound from "./components/NotFound/NotFound";
+import ShareVideos from "./components/YoutubeVideos/ShareVideos";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles.scss";
@@ -16,8 +18,10 @@ const App = () => {
         <NavbarComponent />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/signin" exact element={<Signin />} />
-          <Route path="/signup" exact element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/enter-url" element={<ShareVideos />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer />
       </div>

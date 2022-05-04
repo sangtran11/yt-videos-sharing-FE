@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Container, Button } from "react-bootstrap";
+import { Navbar, Container, Button, Stack } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -28,14 +28,22 @@ const NavbarComponent = () => {
             navigate("/");
           }}
         >
-          Movie Sharing
+          Funny Movies
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           {user ? (
-            <>
-              <Navbar.Text className="pr-4">{`Signed in as: ${user?.result?.name}`}</Navbar.Text>
+            <Stack direction="horizontal" gap={3}>
+              <Navbar.Text>{`Welcome: ${user?.result?.email}`}</Navbar.Text>
+              <Button
+                variant="success"
+                onClick={() => {
+                  navigate("/enter-url");
+                }}
+              >
+                Share a movie
+              </Button>
               <Button onClick={logOut}>Sign Out</Button>
-            </>
+            </Stack>
           ) : (
             <Button
               onClick={() => {
