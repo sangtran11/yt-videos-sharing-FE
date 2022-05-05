@@ -37,16 +37,17 @@ const ShareVideos = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Youtube URL</Form.Label>
               <Form.Control
+                data-testid="yt-url"
                 type="text"
                 name="youtubeUrl"
                 placeholder="Enter a URL"
                 required
                 onChange={handleChange}
-                value={formData.email}
               />
             </Form.Group>
             <div className="text-center">
               <Button
+                data-testid="btn-share-link"
                 variant="primary"
                 type="submit"
                 className="justify-content-md-center"

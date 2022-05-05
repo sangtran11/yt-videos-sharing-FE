@@ -33,10 +33,13 @@ const Auth = () => {
       <Row className="justify-content-md-center">
         <Col sm={6} className="form-styles">
           <form onSubmit={handleSubmit}>
-            <h3 className="text-center">Sign In</h3>
+            <h3 className="text-center" data-testid="signin-label">
+              Sign In
+            </h3>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
+                data-testid="email-input"
                 type="email"
                 name="email"
                 placeholder="Enter email"
@@ -48,6 +51,7 @@ const Auth = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                data-testid="password-input"
                 type="password"
                 name="password"
                 placeholder="Password"

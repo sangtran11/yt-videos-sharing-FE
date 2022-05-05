@@ -35,6 +35,7 @@ const NavbarComponent = () => {
             <Stack direction="horizontal" gap={3}>
               <Navbar.Text>{`Welcome: ${user?.result?.email}`}</Navbar.Text>
               <Button
+                data-testid="btn-sharing"
                 variant="success"
                 onClick={() => {
                   navigate("/enter-url");
@@ -42,10 +43,11 @@ const NavbarComponent = () => {
               >
                 Share a movie
               </Button>
-              <Button onClick={logOut}>Sign Out</Button>
+              <Button data-testid="btn-logout" onClick={logOut}>Sign Out</Button>
             </Stack>
           ) : (
             <Button
+              data-testid="btn-signin"
               onClick={() => {
                 navigate("/signin");
               }}

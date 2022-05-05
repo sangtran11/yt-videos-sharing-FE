@@ -14,17 +14,15 @@ import "./styles.scss";
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
-        <NavbarComponent />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/enter-url" element={<ShareVideos />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <ToastContainer />
-      </div>
+      <NavbarComponent />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/enter-url" element={<ShareVideos />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 };

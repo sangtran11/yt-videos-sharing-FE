@@ -18,7 +18,6 @@ export const shareVideo = (formData, navigate) => async (dispatch) => {
 export const fetchVideos = () => async (dispatch) => {
   try {
     const { data } = await api.fetchVideos();
-    console.log("data home", data);
     dispatch({ type: FETCH_VIDEOS, payload: data });
   } catch (error) {
     console.log(error);

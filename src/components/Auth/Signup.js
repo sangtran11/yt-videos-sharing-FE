@@ -39,6 +39,7 @@ const Auth = () => {
             <Form.Group className="mb-3" controlId="formBasicFirstName">
               <Form.Label>First Name</Form.Label>
               <Form.Control
+                data-testid="input-firstName"
                 type="text"
                 name="firstName"
                 placeholder="Enter First Name"
@@ -50,6 +51,7 @@ const Auth = () => {
             <Form.Group className="mb-3" controlId="formBasicLastName">
               <Form.Label>Last Name</Form.Label>
               <Form.Control
+                data-testid="input-lastName"
                 type="text"
                 name="lastName"
                 placeholder="Enter Last Name"
@@ -61,6 +63,7 @@ const Auth = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
+                data-testid="email-input"
                 type="email"
                 name="email"
                 placeholder="Enter email"
@@ -72,6 +75,7 @@ const Auth = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                data-testid="password-input"
                 type="password"
                 name="password"
                 placeholder="Password"
