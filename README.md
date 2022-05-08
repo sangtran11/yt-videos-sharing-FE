@@ -1,10 +1,6 @@
 Implement signin/signup, upload, fetch videos features  
 BE: https://sharing-movie-be.herokuapp.com/user/fetch-videos  
-FE: https://sharing-youtube-videos.netlify.app
-
-BE: https://sharing-movie-be.herokuapp.com/user/fetch-videos
-FE: https://sharing-youtube-videos.netlify.app
-
+FE: https://sharing-youtube-videos.netlify.app  
 ## Available Scripts
 
 In the project directory, you can run:
